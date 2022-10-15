@@ -13,7 +13,7 @@ class Profile(models.Model):
     #dont forget to add this to your admin if you want to want to see it on admin
     
     
-    def save(self):
+    def save(self,*args, **kwargs):
       super().save()
       img = Image.open(self.image.path)
       
